@@ -93,6 +93,17 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .bar nav a { text-decoration: none; }
 .bar nav a:hover { color: var(--accent); }
 .bar nav sup { color: var(--accent2); font-size: 0.7em; }
+.theme-toggle {
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
 /* Numbers */
 .stats {

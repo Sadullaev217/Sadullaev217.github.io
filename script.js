@@ -15,6 +15,14 @@ setAll('[data-stat="languages"]', languages);
 setAll('[data-count="projects"]', projects);
 setAll('[data-count="studying"]', studying);
 
+// Theme: dark by default, choice is remembered in localStorage (an inline script in <head> applies it before paint).
+document.querySelector(".theme-toggle")?.addEventListener("click", () => {
+  const root = document.documentElement;
+  const next = root.dataset.theme === "light" ? "dark" : "light";
+  root.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
+
 fetch(`https://api.github.com/users/${GITHUB_USER}`)
   .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
   .then((user) => setAll('[data-stat="repos"]', user.public_repos))
