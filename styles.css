@@ -64,6 +64,21 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 
 .prompt { font-family: var(--font-mono); color: var(--accent2); user-select: none; }
 
+/* Skip link: visible only on keyboard focus */
+.skip {
+  position: absolute;
+  left: 20px;
+  top: -60px;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  border-radius: 3px;
+  z-index: 10;
+}
+.skip:focus { top: 12px; }
+
 /* Top bar */
 .bar {
   display: flex;
@@ -80,6 +95,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .bar nav { display: flex; gap: 20px; }
 .bar nav a { text-decoration: none; }
 .bar nav a:hover { color: var(--accent); }
+.bar nav sup { color: var(--accent2); font-size: 0.7em; }
+
+/* Numbers */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+}
+.stats div { padding: 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+.stats dt { font-family: var(--font-mono); font-size: 0.78125rem; color: var(--muted); }
+.stats dd { margin: 6px 0 0; font-family: var(--font-display); font-weight: 700; font-size: 2rem; letter-spacing: -0.04em; color: var(--accent); }
 
 /* Hero */
 .hero { padding-block: 56px 48px; }

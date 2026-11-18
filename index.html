@@ -16,18 +16,19 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <div class="wrap">
   <div class="kasane" aria-hidden="true"></div>
   <header class="bar">
     <span class="path">~/Sadullaev217</span>
     <nav aria-label="Sections">
-      <a href="#projects">Projects</a>
-      <a href="#studying">Studying</a>
+      <a href="#projects">Projects <sup data-count="projects"></sup></a>
+      <a href="#studying">Studying <sup data-count="studying"></sup></a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <div class="hero">
       <p class="eyebrow">Portfolio · 2026</p>
       <p class="line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
@@ -40,10 +41,22 @@
       <p class="line end"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
     </div>
 
+    <section class="numbers" aria-label="By the numbers">
+      <div class="head">
+        <h2><span class="prompt" aria-hidden="true">$ </span>Numbers</h2>
+        <span class="count">counted from this page and GitHub</span>
+      </div>
+      <dl class="stats">
+        <div><dt>Projects shown</dt><dd data-stat="projects">3</dd></div>
+        <div><dt>Languages</dt><dd data-stat="languages">3</dd></div>
+        <div><dt>Public repos</dt><dd data-stat="repos">–</dd></div>
+      </dl>
+    </section>
+
     <section id="projects">
       <div class="head">
         <h2><span class="prompt" aria-hidden="true">$ </span>Projects</h2>
-        <span class="count">github.com/Sadullaev217 · 8 public repositories</span>
+        <span class="count">github.com/Sadullaev217 · <span data-stat="repos">public</span> repositories</span>
       </div>
       <ol class="timeline">
         <li class="step">
@@ -127,5 +140,6 @@
 
   <footer>© 2026 Shokhjakhon Sadulloev</footer>
 </div>
+<script src="script.js" defer></script>
 </body>
 </html>
